@@ -9,6 +9,7 @@ export class BurgersController extends BaseController{
         .get('', this.getallBurgers)
         .post('', this.createBurger)
         .put('/:burgerId', this.editBurger)
+        .delete('.:burgerId', this.deleteBurger)
     }
     async getallBurgers(req, res, next){
         try {
